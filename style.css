@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.calculator {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.display {
+    background: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.display input {
+    width: 100%;
+    background: #f0f0f0;
+    border: none;
+    font-size: 2.5rem;
+    padding: 15px;
+    text-align: right;
+    color: #333;
+    font-weight: 600;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background: #e0e0e0;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #333;
+}
+
+.btn:hover {
+    background: #d0d0d0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-clear {
+    background: #ff6b6b;
+    color: white;
+    grid-column: 1 / 2;
+}
+
+.btn-clear:hover {
+    background: #ff5252;
+}
+
+.btn-operator {
+    background: #667eea;
+    color: white;
+}
+
+.btn-operator:hover {
+    background: #5568d3;
+}
+
+.btn-equals {
+    background: #51cf66;
+    color: white;
+    grid-column: 3 / 5;
+}
+
+.btn-equals:hover {
+    background: #40c057;
+}
+
+.btn-zero {
+    grid-column: 1 / 3;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    .display input {
+        font-size: 2rem;
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
